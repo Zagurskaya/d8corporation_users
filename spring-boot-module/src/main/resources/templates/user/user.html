@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/menuuser :: header-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/menuuser :: header"/>
+
+<div class="container">
+    <h1 th:text="${FullName}">Hello User!</h1>
+
+</div>
+</div>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/menuuser :: header-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/menuuser :: header"/>
+
+<div class="container">
+    <H2>Users </H2>
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Логин</th>
+                <th>ФИО</th>
+                <th>Возрост</th>
+                <th>Дата регистрации</th>
+                <th>Роль</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user, stat : ${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.fullName}"></td>
+                <td th:text="${user.age}"></td>
+                <td th:text="${user.regDate}"></td>
+                <td th:text="${user.role.getName()}"></td>
+            </tr>
+            </tbody>
+        </table>
+</div>
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
