@@ -15,7 +15,7 @@ public class LoggingAspect {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(public * com.gmail.zagurskaya.service.UserService.*(..))")
+    @Pointcut("execution(public * com.gmail.zagurskaya.service.UserService.add(..))")
     public void callAtTraderServicePublic() {
     }
 
