@@ -25,6 +25,4 @@ public class RoleConverterImpl implements RoleConverter {
         role.setName(roleDTO.getName());
         return role;
     }
-
-
 }
